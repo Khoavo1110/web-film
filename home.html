@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Movie Website</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 </head>
 <body>
     <div class="container">
@@ -22,9 +24,11 @@
 
                 <nav class="">
                     <ul class="navbar-nav">
-                        <li><a href="#" class="navbar-link">Home</a></li>
-                        <li><a href="#category" class="navbar-link">Category</a></li>
-                        <li><a href="#live" class="navbar-link indicator">LIVE</a></li>
+                        <li><a href="#" class="navbar-link"><span class="text">Home</span></a></li>
+                        <li><a href="#category" class="navbar-link"><span class="text">Category</span></a></li>
+                        <li><a href="book.html" class="navbar-link"><span class="text">Book tickets</span></a></li>
+                        <li><a href="#live" class="navbar-link"><span class="text">LIVE</span><span class="btn-content"><span class="btn-s"></span></span></a></li>
+                        
                     </ul>
                 </nav>
 
@@ -46,640 +50,1588 @@
                     </button>
 
                     <a href="#" class="navbar-signin">
-                        <span>Sign In</span>
+                        <span class="btnLogin-popup">Sign In</span>
                         <ion-icon name="log-in"></ion-icon>
                     </a>
+                </div>
+            </div>
+            <div class="wrapper">
+                <span class="icon-close"><i class='bx bx-x' ></i></span>
+                <div class="from-box login">
+                    <h2>Login</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxl-gmail'></i></span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label ><input type="checkbox">Remember Me</label>
+                            <a href="#">Forgot Password ?</a>
+                        </div>
+        
+                        <button type="submit" class="btn">Login</button>
+                        <div class="login-register"><p>Dont have a account? <a href="#" class="register-link">register</a></p></div>
+                    </form>
+                </div>
+                <div class="from-box  register">
+                    <h2>Registration</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bx-user' ></i></span>
+                            <input type="text" required>
+                            <label>user name</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxl-gmail'></i></span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label ><input type="checkbox">Đồng ý với điều khoản?</label>
+                          
+                        </div>
+        
+                        <button type="submit" class="btn">Register</button>
+                        <div class="login-register"><p>ALready have a account? <a href="#" class="login-link">Login</a></p></div>
+                    </form>
                 </div>
             </div>
         </header>
 
         <main>
+            
             <section class="banner">
-                <div class="banner-card">
-                    <img src="https://i.postimg.cc/Y9SMdz0P/John-Wick-3.jpg" alt="banner" class="banner-img">
-
-                    <div class="card-content">
-                        <div class="card-info">
-                            <div class="genre">
-                                <ion-icon name="film"></ion-icon>
-                                <span>Action/Thriller</span>
-                            </div>
-
-                            <div class="year">
-                                <ion-icon name="calendar"></ion-icon>
-                                <span>2019</span>
-                            </div>
-
-                            <div class="duration">
-                                <ion-icon name="time"></ion-icon>
-                                <span>2h 11min</span>
-                            </div>
-
-                            <div class="quality">4k</div>
+                
+                <div class="banner-ctn">
+                    <div class="banner-container">
+                        <div class="banner-card">
+                            <img src="./img/david.jpg"  alt="banner" class="banner-img">
                         </div>
-                        <h2 class="card-title">John Wick: Chapter 3 - Parabellum</h2>
+                        
+                        <div class="banner-card">
+                            <img src="./img/chanel-coco-noir-100ml.jpg"  alt="banner" class="banner-img">
+                        </div>
+                        
+                        <div class="banner-card">
+                            <img src="./img/nnam.webp"  alt="banner" class="banner-img">
+                        </div>
+                        <div class="banner-card">
+                            <img src="./img/bleu.jpg"  alt="banner" class="banner-img">
+                        </div>
+                        <div class="banner-card">
+                            <img src="./img/tôi muốn tạo logo chữ Khoa liên quan tới  việc bán nước hoa màu nền đen huyền ảo như viên ngọc  trai đen.jpg" alt="banner" class="banner-img">
+                        </div>
                     </div>
+                    <div class="arrow">
+                     
+                        <span class="h1" ><i class='bx bxs-chevron-left'></i></span>
+                        <span  class="h2"><i class='bx bxs-chevron-right'></i></span>
+                     
+                    </div>
+                </div>
+                <div class="weather">
+                    <div class="weather-card">
+                        <div class="weather-container">
+                            <div class="weather-cloud front">
+                                <span class="weather-left-front"></span>
+                                <span class="weather-right-front"></span>
+                            </div>
+                            <span class="weather-sun sunshine"></span>
+                            <span class="weather-sun"></span>
+                            <div class="weather-cloud back">
+                                <span class="weather-left-back"></span>
+                                <span class="weather-right-back"></span>
+                            </div>
+                        </div>
+                        <div class="weather-card-header">
+                            <span>Messadine, Susah<br>Tunisia</span>
+                            <span>March 13</span>
+                        </div>
+                        <div class="card"></div>
+                        <span class="weather-temp">23°</span>
+                        <div class="weather-temp-scale">
+                            <span>Celcius</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="title">
+                    <p>Thương Hiệu Nước Hoa</p>
+                    <p>Lịch Lãm -Thanh Lịch-Quý Phái</p>
                 </div>
 
             </section>
 
             <section class="movies">
                 <div class="filter-bar">
-                    <div class="filter-dropdowns">
-                        <select name="genre" class="genre">
-                            <option value="all genres">All Genres</option>
-                            <option value="action">Action</option>
-                            <option value="adventure">Adventure</option>
-                            <option value="animal">Animal</option>
-                            <option value="animation">Animation</option>
-                            <option value="biography">Biography</option>
-                            <option value="drama">Drama</option>
-                            <option value="fantasy">Fantasy</option>
-                            <option value="horror">Horror</option>
-                            <option value="scifi">Sci-fi</option>
-                            <option value="war">War</option>
-                        </select>
-
-                        <select name="year" class="year">
-                            <option value="all years">All years</option>
-                            <option value="2024">2024</option>
-                            <option value="2020-2023">2020-2023</option>
-                            <option value="2010-2019">2010-2019</option>
-                            <option value="2000-2009">2000-2009</option>
-                            <option value="1980-1999">1980-1999</option>
-                        </select>
-                    </div>
-
                     <div class="filter-radios">
                         <input type="radio" name="grade" id="featured" checked>
-                        <label for="featured">Featured</label>
+                        <label for="featured">Male</label>
 
                         <input type="radio" name="grade" id="popular">
-                        <label for="popular">Popular</label>
-
-                        <input type="radio" name="grade" id="newest">
-                        <label for="newest">Newest</label>
+                        <label for="popular">Female</label>
 
                         <div class="checked-radio-bg"></div>
                     </div>
                 </div>
-
-                <div class="movies-grid">
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/C5mrM9gh/red-notice.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
+                <div class="product">
+                    <div class="product-btn">
+                        <div class="product-container">
+                            <div class="movies-grid">
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/nnam.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.9</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                          
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Dior Sauvage</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Quyến rũ/Thanh lịch</span>
+                                            <div class="total">
+                                                <span class="gia">2.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>7.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        
+                                           
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>6.3</span>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/bleu.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>5.0</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+        
+                                           
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Chanel: BLEU</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Sang Trong</span>
+                                            <div class="total">
+                                                <span class="gia">5.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>10.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/allure.png" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.6</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+        
+                                            
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Allure homme sport</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Nam tinh manh me</span>
+                                            <div class="total">
+                                                <span class="gia">3.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>8.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Red Notice</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Comedy</span>
-                                <span class="year">2021</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/brB48dkY/spider-men.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/bleu2.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.3</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Bleu Limitit</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Limitit/Chanel</span>
+                                            <div class="total">
+                                                <span class="gia">6.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>12.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>7.4</span>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/newsalon.jpg!w700wp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>5.0</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Fashion Perfume</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">new grand</span>
+                                            <div class="total">
+                                                <span class="gia">1.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>3.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/lacolle.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.0</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">1917</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">War/Drama</span>
+                                            <div class="total">
+                                                <span class="gia">500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Spider-Man: Homecoming</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2017</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/Kv3HBGtL/matrix.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/versace.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.5</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">versace</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Fantasy</span>
+                                            <div class="total">
+                                                <span class="gia">2.000.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>3.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>5.6</span>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/narciso.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.0</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Narciso</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">lang man / nhe nhang</span>
+                                            <div class="total">
+                                                <span class="gia">300.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>900.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/ardore.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.0</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Dore</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Nhe nhang / lau phai</span>
+                                            <div class="total">
+                                                <span class="gia">600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.200.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">The Matrix Ressurections</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Sci-fi/Action</span>
-                                <span class="year">2021</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/c4YNZM9V/eternals.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/red leather.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.3</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Red Leather</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Manh me</span>
+                                            <div class="total">
+                                                <span class="gia">600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.200.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>6.3</span>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/eros.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.6</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Versace Eros</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Sang Trong / Cuon Hut</span>
+                                            <div class="total">
+                                                <span class="gia">3.600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>9.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/bv.jpg" alt="movie" class="card-img" >
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.0</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Lord Of The MAN</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">For Man</span>
+                                            <div class="total">
+                                                <span class="gia">4.600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>7.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Eternals</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Adventure/Action</span>
-                                <span class="year">2021</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/Y9jJP1LD/dune.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/Chanel No.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.6</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Smell of Death</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Danger</span>
+                                            <div class="total">
+                                                <span class="gia">8.600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>12.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.0</span>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/gabana.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.7</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Gabana</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Dore</span>
+                                            <div class="total">
+                                                <span class="gia">2.300.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>4.700.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/lanvin.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.5</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">LanVin</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">New Profectional</span>
+                                            <div class="total">
+                                                <span class="gia">1.400.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>4.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Dune: Part One</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Sci-fi/Adventure</span>
-                                <span class="year">2021</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/q7NwVQQK/1917.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/hypont.png" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.5</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Rose</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Flower</span>
+                                            <div class="total">
+                                                <span class="gia">3.400.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>6.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.2</span>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/goodgirl.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.7</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Good girl</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">thanh lich / nu tinh</span>
+                                            <div class="total">
+                                                <span class="gia">400.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/scandal.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>5.4</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Gaultier</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">scandal</span>
+                                            <div class="total">
+                                                <span class="gia">2.499.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>5.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">1917</h3>
-
-                            <div class="card-info">
-                                <span class="genre">War/Drama</span>
-                                <span class="year">2021</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/d1vhmV70/shang-chi.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
+                                    </div>
+                            <div class="movies-grid">
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/nnam.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.9</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                          
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Dior Sauvage</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Quyến rũ/Thanh lịch</span>
+                                            <div class="total">
+                                                <span class="gia">2.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>7.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        
+                                           
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>7.4</span>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/bleu.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>5.0</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+        
+                                           
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Chanel: BLEU</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Sang Trong</span>
+                                            <div class="total">
+                                                <span class="gia">5.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>10.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/allure.png" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.6</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+        
+                                            
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Allure homme sport</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Nam tinh manh me</span>
+                                            <div class="total">
+                                                <span class="gia">3.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>8.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Shang-Chi and the Legend of the Ten Rings</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Fantasy</span>
-                                <span class="year">2021</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/L6r638wM/casino-royale.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/bleu2.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.3</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Bleu Limitit</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Limitit/Chanel</span>
+                                            <div class="total">
+                                                <span class="gia">6.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>12.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.0</span>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/newsalon.jpg!w700wp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>5.0</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Fashion Perfume</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">new grand</span>
+                                            <div class="total">
+                                                <span class="gia">1.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>3.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/lacolle.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.0</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">1917</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">War/Drama</span>
+                                            <div class="total">
+                                                <span class="gia">500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Casino Royale</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2006</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/Gt6rKXMj/dark-knight.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/versace.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.5</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">versace</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Fantasy</span>
+                                            <div class="total">
+                                                <span class="gia">2.000.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>3.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>9.0</span>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/narciso.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.0</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Narciso</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">lang man / nhe nhang</span>
+                                            <div class="total">
+                                                <span class="gia">300.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>900.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/ardore.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.0</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Dore</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Nhe nhang / lau phai</span>
+                                            <div class="total">
+                                                <span class="gia">600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.200.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">The Dark Knight</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2008</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/hjjBqk6r/panther.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/red leather.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.3</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Red Leather</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Manh me</span>
+                                            <div class="total">
+                                                <span class="gia">600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.200.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>7.3</span>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/eros.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.6</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Versace Eros</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Sang Trong / Cuon Hut</span>
+                                            <div class="total">
+                                                <span class="gia">3.600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>9.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/bv.jpg" alt="movie" class="card-img" >
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.0</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Lord Of The MAN</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">For Man</span>
+                                            <div class="total">
+                                                <span class="gia">4.600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>7.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Black Panther</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2018</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/QtyrN6rr/venom.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/Chanel No.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.6</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Smell of Death</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Danger</span>
+                                            <div class="total">
+                                                <span class="gia">8.600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>12.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>6.6</span>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/gabana.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.7</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Gabana</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Dore</span>
+                                            <div class="total">
+                                                <span class="gia">2.300.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>4.700.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/lanvin.jpg" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.5</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">LanVin</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">New Profectional</span>
+                                            <div class="total">
+                                                <span class="gia">1.400.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>4.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Venom</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2018</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/3JgJ9TT4/LOTR.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/hypont.png" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.5</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Rose</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Flower</span>
+                                            <div class="total">
+                                                <span class="gia">3.400.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>6.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>9.0</span>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/goodgirl.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.7</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Good girl</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">thanh lich / nu tinh</span>
+                                            <div class="total">
+                                                <span class="gia">400.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="./img/scandal.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>5.4</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Gaultier</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">scandal</span>
+                                            <div class="total">
+                                                <span class="gia">2.499.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>5.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Lord Of The Rings: Return Of The King</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Fantasy/Adventure</span>
-                                <span class="year">2003</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/VkgsQW5z/saving-private-ryan.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.6</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Saving Private Ryan</h3>
-
-                            <div class="card-info">
-                                <span class="genre">War/Action</span>
-                                <span class="year">1998</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/cHgd3qhJ/interstaller.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.7</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Interstellar</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Sci-fi/Adventure</span>
-                                <span class="year">2014</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/y8LKr6rd/gladiator.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.5</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Gladiator</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2000</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/6QSXtjKx/endgame.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.5</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Avengers: Endgame</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Sci-fi</span>
-                                <span class="year">2019</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/1X0h0yqy/ww84.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>5.4</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Wonder Woman 1984</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2020</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/v85swtSC/captain-marvel.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>5.4</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Captain Marvel</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Sci-fi</span>
-                                <span class="year">2019</span>
-                            </div>
+                                    </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -688,112 +1640,76 @@
             </section>
 
             <section class="category" id="category">
-                <h2 class="section-heading">Category</h2>
+            <h2 class="section-heading">Thương Hiệu Quan Tâm</h2>
 
                 <div class="category-grid">
                     <div class="category-card">
-                        <img src="https://i.postimg.cc/JzfWFmfC/action.jpg" alt="image" class="card-img">
-                        <div class="name">Action</div>
-                        <div class="total">100</div>
+                        <img src="./img/brada_grand.webp" alt="image" class="card-img">
+                        <a href="https://www.prada.com/us/en.html" class="name">Prada</a>
+                        <div class="total-1">100</div>
                     </div>
 
                     <div class="category-card">
-                        <img src="https://i.postimg.cc/CKpxqjL8/comedy.jpg" alt="image" class="card-img">
-                        <div class="name">Comedy</div>
-                        <div class="total">50</div>
+                        <img src="./img/gucci(1).webp" alt="image" class="card-img">
+                        <a href="https://www.gucci.com/?srsltid=AfmBOorAT2s5RD-3-Bis72GwA06amOp-9SBZ4tZUWDxYyH6i8OHASvan" class="name">Gucci</a>
+                        <div class="total-1">95</div>
                     </div>
 
                     <div class="category-card">
-                        <img src="https://i.postimg.cc/3rfrBMxY/thriller.webp" alt="image" class="card-img">
-                        <div class="name">Thriller</div>
-                        <div class="total">20</div>
+                        <img src="./img/chanel-logo.png" alt="image" class="card-img">
+                        <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiz0Z2iqpqMAxVj0RYFHb7-FtsYABABGgJ0bA&co=1&gclid=Cj0KCQjw-e6-BhDmARIsAOxxlxWFf7z90miscOJvXrcGn8BRSfLXCjsyd1Y4N9XvjmWCvEAStJziDksaApNrEALw_wcB&ohost=www.google.com&cid=CAESVeD2pVM6Yjs2nOyTch9qR-kv-uGFMwG2PAy3qXC2RgtpnVgjVvuIXQfne7c-LWpy0TINJm75sry8r1sMbemrTgIA0Vn7WAOH_6YIEbKH6sz5_XpjHXQ&sig=AOD64_3I1brvLGhKnVitLeWTXKKXjDp6TA&q&adurl&ved=2ahUKEwjb9ZiiqpqMAxVUra8BHXHUIAgQ0Qx6BAgJEAE" class="name">Chanel</a>
+                        <div class="total-1">95</div>
                     </div>
 
                     <div class="category-card">
-                        <img src="https://i.postimg.cc/HkXpdV4k/horror.jpg" alt="image" class="card-img">
-                        <div class="name">Horror</div>
-                        <div class="total">80</div>
+                        <img src="./img/balen-logo.jpg" alt="image" class="card-img">
+                        <a href="https://www.balenciaga.com/?srsltid=AfmBOoqufMO3obdjpJG65980_tKNN3jvkcbhehbdWIHPqifSbYUDsj5u" class="name">Balenciaga</a>
+                        <div class="total-1">80</div>
                     </div>
 
                     <div class="category-card">
-                        <img src="https://i.postimg.cc/qRRVhRnn/adventure.jpg" alt="image" class="card-img">
-                        <div class="name">Adventure</div>
-                        <div class="total">100</div>
+                        <img src="./img/fendi2.webp" alt="image" class="card-img">
+                        <a href="https://www.fendi.com/?srsltid=AfmBOopSjxHGOyhsQimcV9yUuDsPch4ItpI0kW9J0-oiTJZpDMe4zPn-" class="name">fendi</a>
+                        <div class="total-1">100</div>
                     </div>
 
                     <div class="category-card">
-                        <img src="https://i.postimg.cc/15pmZ8K5/animated.jpg" alt="image" class="card-img">
-                        <div class="name">Animation</div>
-                        <div class="total">50</div>
+                        <img src="./img/diorlogo.jpg" alt="image" class="card-img">
+                        <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi1x9fS2pyMAxVd2BYFHUK0CE0YABAAGgJ0bA&co=1&gclid=CjwKCAjwnPS-BhBxEiwAZjMF0vaYojnUjIfQ1BceWsudVRcAgu3bfI5y0B34jDm8oI13FWald58a0BoCbMgQAvD_BwE&ohost=www.google.com&cid=CAESVeD2YeVI9g3wE7FxmU8CVkAzJO1l_gVNgHatlBG-SH82-m8_CPn2jh0SIyrKDUgwMBMhxzJLAFIW2FB1UCDnr2itOdeV_pipssUgJnija6RHiT9M7iM&sig=AOD64_1RZcpxHuflHZk3aT3QPJfiJuvqnw&q&adurl&ved=2ahUKEwj8gNPS2pyMAxVun68BHQ7MIAgQ0Qx6BAgvEAE" class="name">Dior</a>
+                        <div class="total-1">50</div>
                     </div>
 
                     <div class="category-card">
-                        <img src="https://i.postimg.cc/XvX6Xq95/crime.jpg" alt="image" class="card-img">
-                        <div class="name">Crime</div>
-                        <div class="total">20</div>
+                        <img src="./img/boss.jpg" alt="image" class="card-img">
+                        <a href="https://front-row.com/men/hugo-boss-sale/ready-to-wear.html" class="name">Boss</a>
+                        <div class="total-1">20</div>
                     </div>
 
                     <div class="category-card">
-                        <img src="https://i.postimg.cc/8568BYKP/sci-fi.jpg" alt="image" class="card-img">
-                        <div class="name">Sci-fi</div>
-                        <div class="total">80</div>
+                        <img src="./img/versace.jpg" alt="image" class="card-img">
+                        <a href="https://www.versace.com/row/en/" class="name">Versace</a>
+                        <div class="total-1">80</div>
                     </div>
                 </div>
             </section>
 
-            <section class="live" id="live">
-                <h2 class="section-heading">Live TV Shows</h2>
-
-                <div class="live-grid">
-                    <div class="live-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/m26wBrZJ/planet.jpg" alt="image" class="card-img">
-                            <div class="live-badge">LIVE</div>
-                            <div class="total-viewers">305K viewers</div>
-                            <div class="play">
-                                <ion-icon name="play-circle-outline"></ion-icon>
+               <section class="feedback">
+                <p class="feedback-title">Đánh giá từ khách hàng</p>
+                <div class="feedback-btn">
+                    <div class="feedback-container">
+                        <div class="feedback-card">
+                            <div class="img">
+                                <img src="./img/1_feedback.png" alt="">
                             </div>
-                        </div>
-
-                        <div class="card-body">
-                            <img src="https://i.postimg.cc/YCzQjqtt/bbcamerica.jpg" alt="image" class="avatar">
-                            <h3 class="card-title">Planet Earth II <br> Season 1 - Islands</h3>
-                        </div>
-                    </div>
-
-                    <div class="live-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/PrY8CrdP/got.jpg" alt="image" class="card-img">
-                            <div class="live-badge">LIVE</div>
-                            <div class="total-viewers">1.7M viewers</div>
-                            <div class="play">
-                                <ion-icon name="play-circle-outline"></ion-icon>
+                            <div class="content">
+                                <p style="text-align: center; padding:20px;font-size:30px">MARINA OZAQUA</p>
+                                <p>noi dung: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus autem modi accusantium obcaecati iure odit mollitia nisi optio. Maxime ratione similique quos vero, non autem qui cumque? Asperiores, delectus laudantium!</p>
+                                <p style="text-align:center;padding:50px;font-size:30px">⭐⭐⭐⭐⭐</p>
                             </div>
-                        </div>
-
-                        <div class="card-body">
-                            <img src="https://i.postimg.cc/ryWpJn3H/HBO-Logo-square.jpg" alt="image" class="avatar">
-                            <h3 class="card-title">Game of Thrones <br> Season 5 - Mother's Mercy</h3>
-                        </div>
-                    </div>
-
-                    <div class="live-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/RVLZr3MQ/vikins.jpg" alt="image" class="card-img">
-                            <div class="live-badge">LIVE</div>
-                            <div class="total-viewers">468K viewers</div>
-                            <div class="play">
-                                <ion-icon name="play-circle-outline"></ion-icon>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <img src="https://i.postimg.cc/ryWpJn3H/HBO-Logo-square.jpg" alt="image" class="avatar">
-                            <h3 class="card-title">Vikings <br> Season 4 - What Might Have Been</h3>
                         </div>
                     </div>
                 </div>
-            </section>
+               </section>
         </main>
 
         <footer>
@@ -867,873 +1783,4 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="main.js"></script>
 </body>
-</html>            <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Movie Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header class="">
-            <div class="navbar">
-                <button class="navbar-menu-btn">
-                    <span class="one"></span>
-                    <span class="two"></span>
-                    <span class="three"></span>
-                </button>
-
-                <a href="#" class="navbar-brand">
-                    <img src="https://i.postimg.cc/KvjKVZXj/logo.png" alt="logo">
-                </a>
-
-                <nav class="">
-                    <ul class="navbar-nav">
-                        <li><a href="#" class="navbar-link">Home</a></li>
-                        <li><a href="#category" class="navbar-link">Category</a></li>
-                        <li><a href="#live" class="navbar-link indicator">LIVE</a></li>
-                    </ul>
-                </nav>
-
-                <div class="navbar-actions">
-                    <form action="#" class="navbar-form">
-                        <input type="text" name="search" placeholder="I'm looking for..." class="navbar-form-search">
-
-                        <button class="navbar-form-btn">
-                            <ion-icon name="search"></ion-icon>
-                        </button>
-    
-                        <button class="navbar-form-close">
-                            <ion-icon name="close-circle-outline"></ion-icon>
-                        </button>
-                    </form>
-
-                    <button class="navbar-search-btn">
-                        <ion-icon name="search"></ion-icon>
-                    </button>
-
-                    <a href="#" class="navbar-signin">
-                        <span>Sign In</span>
-                        <ion-icon name="log-in"></ion-icon>
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <main>
-            <section class="banner">
-                <div class="banner-card">
-                    <img src="https://i.postimg.cc/Y9SMdz0P/John-Wick-3.jpg" alt="banner" class="banner-img">
-
-                    <div class="card-content">
-                        <div class="card-info">
-                            <div class="genre">
-                                <ion-icon name="film"></ion-icon>
-                                <span>Action/Thriller</span>
-                            </div>
-
-                            <div class="year">
-                                <ion-icon name="calendar"></ion-icon>
-                                <span>2019</span>
-                            </div>
-
-                            <div class="duration">
-                                <ion-icon name="time"></ion-icon>
-                                <span>2h 11min</span>
-                            </div>
-
-                            <div class="quality">4k</div>
-                        </div>
-                        <h2 class="card-title">John Wick: Chapter 3 - Parabellum</h2>
-                    </div>
-                </div>
-
-            </section>
-
-            <section class="movies">
-                <div class="filter-bar">
-                    <div class="filter-dropdowns">
-                        <select name="genre" class="genre">
-                            <option value="all genres">All Genres</option>
-                            <option value="action">Action</option>
-                            <option value="adventure">Adventure</option>
-                            <option value="animal">Animal</option>
-                            <option value="animation">Animation</option>
-                            <option value="biography">Biography</option>
-                            <option value="drama">Drama</option>
-                            <option value="fantasy">Fantasy</option>
-                            <option value="horror">Horror</option>
-                            <option value="scifi">Sci-fi</option>
-                            <option value="war">War</option>
-                        </select>
-
-                        <select name="year" class="year">
-                            <option value="all years">All years</option>
-                            <option value="2024">2024</option>
-                            <option value="2020-2023">2020-2023</option>
-                            <option value="2010-2019">2010-2019</option>
-                            <option value="2000-2009">2000-2009</option>
-                            <option value="1980-1999">1980-1999</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-radios">
-                        <input type="radio" name="grade" id="featured" checked>
-                        <label for="featured">Featured</label>
-
-                        <input type="radio" name="grade" id="popular">
-                        <label for="popular">Popular</label>
-
-                        <input type="radio" name="grade" id="newest">
-                        <label for="newest">Newest</label>
-
-                        <div class="checked-radio-bg"></div>
-                    </div>
-                </div>
-
-                <div class="movies-grid">
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/C5mrM9gh/red-notice.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>6.3</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Red Notice</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Comedy</span>
-                                <span class="year">2021</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/brB48dkY/spider-men.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>7.4</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Spider-Man: Homecoming</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2017</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/Kv3HBGtL/matrix.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>5.6</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">The Matrix Ressurections</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Sci-fi/Action</span>
-                                <span class="year">2021</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/c4YNZM9V/eternals.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>6.3</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Eternals</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Adventure/Action</span>
-                                <span class="year">2021</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/Y9jJP1LD/dune.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.0</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Dune: Part One</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Sci-fi/Adventure</span>
-                                <span class="year">2021</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/q7NwVQQK/1917.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.2</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">1917</h3>
-
-                            <div class="card-info">
-                                <span class="genre">War/Drama</span>
-                                <span class="year">2021</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/d1vhmV70/shang-chi.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>7.4</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Shang-Chi and the Legend of the Ten Rings</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Fantasy</span>
-                                <span class="year">2021</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/L6r638wM/casino-royale.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.0</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Casino Royale</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2006</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/Gt6rKXMj/dark-knight.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>9.0</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">The Dark Knight</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2008</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/hjjBqk6r/panther.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>7.3</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Black Panther</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2018</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/QtyrN6rr/venom.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>6.6</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Venom</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2018</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/3JgJ9TT4/LOTR.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>9.0</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Lord Of The Rings: Return Of The King</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Fantasy/Adventure</span>
-                                <span class="year">2003</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/VkgsQW5z/saving-private-ryan.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.6</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Saving Private Ryan</h3>
-
-                            <div class="card-info">
-                                <span class="genre">War/Action</span>
-                                <span class="year">1998</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/cHgd3qhJ/interstaller.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.7</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Interstellar</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Sci-fi/Adventure</span>
-                                <span class="year">2014</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/y8LKr6rd/gladiator.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.5</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Gladiator</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2000</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/6QSXtjKx/endgame.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>8.5</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Avengers: Endgame</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Sci-fi</span>
-                                <span class="year">2019</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/1X0h0yqy/ww84.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>5.4</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Wonder Woman 1984</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2020</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/v85swtSC/captain-marvel.jpg" alt="movie" class="card-img">
-
-                            <div class="card-overlay">
-
-                                <div class="bookmark">
-                                    <ion-icon name="bookmark"></ion-icon>
-                                </div>
-
-                                <div class="rating">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <span>5.4</span>
-                                </div>
-
-                                <div class="play">
-                                    <ion-icon name="play-circle-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Captain Marvel</h3>
-
-                            <div class="card-info">
-                                <span class="genre">Action/Sci-fi</span>
-                                <span class="year">2019</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="load-more">LOAD MORE</button>
-            </section>
-
-            <section class="category" id="category">
-                <h2 class="section-heading">Category</h2>
-
-                <div class="category-grid">
-                    <div class="category-card">
-                        <img src="https://i.postimg.cc/JzfWFmfC/action.jpg" alt="image" class="card-img">
-                        <div class="name">Action</div>
-                        <div class="total">100</div>
-                    </div>
-
-                    <div class="category-card">
-                        <img src="https://i.postimg.cc/CKpxqjL8/comedy.jpg" alt="image" class="card-img">
-                        <div class="name">Comedy</div>
-                        <div class="total">50</div>
-                    </div>
-
-                    <div class="category-card">
-                        <img src="https://i.postimg.cc/3rfrBMxY/thriller.webp" alt="image" class="card-img">
-                        <div class="name">Thriller</div>
-                        <div class="total">20</div>
-                    </div>
-
-                    <div class="category-card">
-                        <img src="https://i.postimg.cc/HkXpdV4k/horror.jpg" alt="image" class="card-img">
-                        <div class="name">Horror</div>
-                        <div class="total">80</div>
-                    </div>
-
-                    <div class="category-card">
-                        <img src="https://i.postimg.cc/qRRVhRnn/adventure.jpg" alt="image" class="card-img">
-                        <div class="name">Adventure</div>
-                        <div class="total">100</div>
-                    </div>
-
-                    <div class="category-card">
-                        <img src="https://i.postimg.cc/15pmZ8K5/animated.jpg" alt="image" class="card-img">
-                        <div class="name">Animation</div>
-                        <div class="total">50</div>
-                    </div>
-
-                    <div class="category-card">
-                        <img src="https://i.postimg.cc/XvX6Xq95/crime.jpg" alt="image" class="card-img">
-                        <div class="name">Crime</div>
-                        <div class="total">20</div>
-                    </div>
-
-                    <div class="category-card">
-                        <img src="https://i.postimg.cc/8568BYKP/sci-fi.jpg" alt="image" class="card-img">
-                        <div class="name">Sci-fi</div>
-                        <div class="total">80</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="live" id="live">
-                <h2 class="section-heading">Live TV Shows</h2>
-
-                <div class="live-grid">
-                    <div class="live-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/m26wBrZJ/planet.jpg" alt="image" class="card-img">
-                            <div class="live-badge">LIVE</div>
-                            <div class="total-viewers">305K viewers</div>
-                            <div class="play">
-                                <ion-icon name="play-circle-outline"></ion-icon>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <img src="https://i.postimg.cc/YCzQjqtt/bbcamerica.jpg" alt="image" class="avatar">
-                            <h3 class="card-title">Planet Earth II <br> Season 1 - Islands</h3>
-                        </div>
-                    </div>
-
-                    <div class="live-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/PrY8CrdP/got.jpg" alt="image" class="card-img">
-                            <div class="live-badge">LIVE</div>
-                            <div class="total-viewers">1.7M viewers</div>
-                            <div class="play">
-                                <ion-icon name="play-circle-outline"></ion-icon>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <img src="https://i.postimg.cc/ryWpJn3H/HBO-Logo-square.jpg" alt="image" class="avatar">
-                            <h3 class="card-title">Game of Thrones <br> Season 5 - Mother's Mercy</h3>
-                        </div>
-                    </div>
-
-                    <div class="live-card">
-                        <div class="card-head">
-                            <img src="https://i.postimg.cc/RVLZr3MQ/vikins.jpg" alt="image" class="card-img">
-                            <div class="live-badge">LIVE</div>
-                            <div class="total-viewers">468K viewers</div>
-                            <div class="play">
-                                <ion-icon name="play-circle-outline"></ion-icon>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <img src="https://i.postimg.cc/ryWpJn3H/HBO-Logo-square.jpg" alt="image" class="avatar">
-                            <h3 class="card-title">Vikings <br> Season 4 - What Might Have Been</h3>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="https://i.postimg.cc/KvjKVZXj/logo.png" alt="image" class="footer-logo">
-                    <p class="slogan">Movies & TV Shows, Online Cinema, Movie Database HTML Template</p>
-
-                    <div class="social-link">
-                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-tiktok"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
-                    </div>
-                </div>
-
-                <div class="footer-links">
-                    <ul>
-                        <h4 class="link-heading">CineFlix</h4>
-    
-                        <li class="link-item"><a href="#">About us</a></li>
-                        <li class="link-item"><a href="#">My profile</a></li>
-                        <li class="link-item"><a href="#">Pricing plans</a></li>
-                        <li class="link-item"><a href="#">Contacts</a></li>
-                    </ul>
-    
-                    <ul>
-                        <h4 class="link-heading">Browse</h4>
-    
-                        <li class="link-item"><a href="#">Live TV</a></li>
-                        <li class="link-item"><a href="#">Live News</a></li>
-                        <li class="link-item"><a href="#">Live Sports</a></li>
-                        <li class="link-item"><a href="#">Streaming Library</a></li>
-                    </ul>
-    
-                    <ul>
-    
-                        <li class="link-item"><a href="#">TV Shows</a></li>
-                        <li class="link-item"><a href="#">Movies</a></li>
-                        <li class="link-item"><a href="#">Kids</a></li>
-                        <li class="link-item"><a href="#">Collections</a></li>
-                    </ul>
-    
-                    <ul>
-                        <h4 class="link-heading">Help</h4>
-    
-                        <li class="link-item"><a href="#">Account & Billing</a></li>
-                        <li class="link-item"><a href="#">Plans & Pricing</a></li>
-                        <li class="link-item"><a href="#">Supported Devices</a></li>
-                        <li class="link-item"><a href="#">Accessibility</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-copyright">
-                <div class="copyright">
-                    <p>© Copyright 2024 CineFlix</p>
-                </div>
-
-                <div class="wrapper">
-                    <a href="#">Privacy policy</a>
-                    <a href="#">Terms and conditions</a>
-                </div>
-            </div>
-
-        </footer>
-    </div>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="main.js"></script>
-</body>
-</html>            
+</html>
