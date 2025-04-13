@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Movie Website</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+    <div class="container">
+        <header class="">
+            <div class="navbar">
+                <button class="navbar-menu-btn">
+                    <span class="one"></span>
+                    <span class="two"></span>
+                    <span class="three"></span>
+                </button>
+
+                <a href="#" class="navbar-brand">
+                    <img src="../img/logo_name.png" alt="logo" style="width: 150px;">
+                </a>
+
+                <nav class="">
+                    <ul class="navbar-nav">
+                        <li><a href="./product.html" class="navbar-link"><span class="text">Trang Chủ</span></a></li>
+                        <li><a href="#product" class="navbar-link"><span class="text">Sản Phẩm</span></a></li>
+                        <li><a href="book.html" class="navbar-link"><span class="text">Cửa Hàng</span></a></li>
+                        <li><a href="#category" class="navbar-link"><span class="text">Thương Hiệu</span></a></li>
+                        
+                    </ul>
+                </nav>
+
+                <div class="navbar-actions">
+                    <form action="#" class="navbar-form">
+                        <input type="text" name="search" placeholder="I'm looking for..." class="navbar-form-search">
+
+                        <button class="navbar-form-btn">
+                            <ion-icon name="search"></ion-icon>
+                        </button>
+    
+                        <button class="navbar-form-close">
+                            <ion-icon name="close-circle-outline"></ion-icon>
+                        </button>
+                    </form>
+
+                    <button class="navbar-search-btn">
+                        <ion-icon name="search"></ion-icon>
+                    </button>
+
+                    <a href="dangnhap.html" class="navbar-signin">
+                        <span class="btnLogin-popup">Sign In</span>
+                        <ion-icon name="log-in"></ion-icon>
+                    </a>
+                    <button class="navbar-cart-btn">
+                        <ion-icon name="cart"></ion-icon>
+                        <span class="navbar-cart-quantity">(0)</span>
+                    </button>
+                </div>
+            </div>
+            <div class="cart-giohang">
+                <span class="close-giohang"><i class='bx bx-x'></i></span>
+                <div class="cart-container">
+                    <h3 class="cart-title">Giỏ Hàng</h3>
+            
+                    <div class="cart-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sản Phẩm</th>
+                                    <th>Giá</th>
+                                    <th>SL</th>
+                                    <th>Chọn</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-body">
+                                <!-- Dữ liệu JS thêm vào đây -->
+                            </tbody>
+                        </table>
+                        <h3 style="text-align:right; color:white;">
+                            Tổng Tiền: <span id="total-price">0 VND</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            
+        </header>
+
+        <main>
+            
+            <section class="banner">
+                
+                <div class="banner-ctn">
+                    <div class="banner-container">
+                        <div class="banner-card">
+                            <img src="../img/logo_0.jpg" alt="banner" class="banner-img">
+                        </div>
+                        <div class="banner-card">
+                            <img src="../img/header_logo.webp"  alt="banner" class="banner-img">
+                        </div>
+                        
+                        <div class="banner-card">
+                            <img src="../img/header-logo_2.webp"  alt="banner" class="banner-img">
+                        </div>
+                        
+                        <div class="banner-card">
+                            <img src="../img//header_logo_3.webp"  alt="banner" class="banner-img">
+                        </div>
+                        <div class="banner-card">
+                            <img src="../img/header_logo4.webp"  alt="banner" class="banner-img">
+                        </div>
+                       
+                    </div>
+                    <div class="arrow">
+                     
+                        <span class="h1" ><i class='bx bxs-chevron-left'></i></span>
+                        <span  class="h2"><i class='bx bxs-chevron-right'></i></span>
+                     
+                    </div>
+                </div>
+                <div class="weather">
+                    <div class="weather-card">
+                        <div class="weather-container">
+                            <div class="weather-cloud front">
+                                <span class="weather-left-front"></span>
+                                <span class="weather-right-front"></span>
+                            </div>
+                            <span class="weather-sun sunshine"></span>
+                            <span class="weather-sun"></span>
+                            <div class="weather-cloud back">
+                                <span class="weather-left-back"></span>
+                                <span class="weather-right-back"></span>
+                            </div>
+                        </div>
+                        <div class="weather-card-header">
+                            <span>Messadine, Susah<br>Tunisia</span>
+                            <span>March 13</span>
+                        </div>
+                        <div class="card"></div>
+                        <span class="weather-temp">23°</span>
+                        <div class="weather-temp-scale">
+                            <span>Celcius</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="title">
+                    <p>Giải Pháp An Ninh</p>
+                    <p>Giám Sát - Bảo Vệ - Tin Cậy</p>
+                </div>
+
+            </section>
+
+            <section class="movies">
+                <div class="filter-bar">
+                    <div class="filter-radios">
+                        <input type="radio" name="grade" id="featured" checked>
+                        <label for="featured">Linh Kiện</label>
+
+                        <input type="radio" name="grade" id="popular">
+                        <label for="popular">Camera</label>
+
+                        <div class="checked-radio-bg"></div>
+                    </div>
+                </div>
+                <div class="product" id="product">
+                    <div class="product-btn">
+                        <div class="product-container">
+                            <div class="movies-grid">
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_25.webp" alt="Camera An Ninh Hikvision" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.9</span>
+                                            </div>
+                                            <button class="button">
+                                                <a href="chitietsp.html"><span class="button-content">Xem Chi Tiết</span></a>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Mua</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera An Ninh Hikvision 2MP – Ngoài Trời</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Giám sát 24/7 – Hồng ngoại ban đêm</span>
+                                            <div class="total">
+                                                <span class="gia">2.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>7.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chitiet">
+                                        <span class="close-chitiet"><i class='bx bx-x' ></i></span>
+                                        <h2>🔎 Thông Tin Chi Tiết Camera Hikvision</h2>
+                                    
+                                        <h3>📌 Thông Số Kỹ Thuật</h3>
+                                        <ul>
+                                            <li><strong>Độ phân giải:</strong> 2MP đến 8MP — Hình ảnh siêu nét, chân thực.</li>
+                                            <li><strong>Cảm biến:</strong> CMOS — Tăng cường chất lượng hình ảnh trong điều kiện thiếu sáng.</li>
+                                            <li><strong>Ống kính:</strong> Tùy chỉnh tiêu cự: 2.8mm / 4mm / 6mm.</li>
+                                            <li><strong>Góc nhìn rộng:</strong> Từ 90° đến 130° — Quan sát bao quát hơn.</li>
+                                            <li><strong>Hồng ngoại ban đêm:</strong> Quan sát rõ nét trong bóng tối lên tới 30m hoặc hơn.</li>
+                                            <li><strong>Kết nối:</strong> LAN & Wi-Fi — Truyền tải dữ liệu ổn định.</li>
+                                            <li><strong>Tính năng thông minh:</strong> Phát hiện chuyển động, nhận diện khuôn mặt, phân tích hành vi.</li>
+                                            <li><strong>Khả năng chống chịu:</strong> Chuẩn IP66 — Chống nước, chống bụi hiệu quả.</li>
+                                            <li><strong>Chất liệu vỏ:</strong> Nhựa cao cấp hoặc kim loại — Bền đẹp, chắc chắn.</li>
+                                        </ul>
+                                    
+                                        <h3>🎯 Lợi Ích Khi Sử Dụng</h3>
+                                        <ul>
+                                            <li>🔒 Đảm bảo an ninh — Giám sát và bảo vệ tài sản hiệu quả.</li>
+                                            <li>📲 Theo dõi từ xa — Xem trực tiếp mọi lúc, mọi nơi qua smartphone.</li>
+                                            <li>💾 Lưu trữ thông minh — Ghi hình liên tục, dễ dàng xem lại khi cần.</li>
+                                        </ul>
+                                    
+                                        <h3>🏠 Ứng Dụng Thực Tế</h3>
+                                        <p>Phù hợp lắp đặt tại: Nhà riêng, văn phòng, cửa hàng, kho xưởng, khu vực công cộng,...</p>
+                                    </div>
+                                    
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_12.webp" alt="Camera An Ninh Mini" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>5.0</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera An Ninh Mini WiFi Siêu Nhỏ</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Ẩn mình tinh tế – Kết nối không dây</span>
+                                            <div class="total">
+                                                <span class="gia">5.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>10.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chitiet">
+                                        <span class="close-chitiet"><i class='bx bx-x' ></i></span>
+                                        <h2>🔎 Thông Tin Chi Tiết Camera Hikvision</h2>
+                                    
+                                        <h3>📌 Thông Số Kỹ Thuật</h3>
+                                        <ul>
+                                            <li><strong>Độ phân giải:</strong> 2MP đến 8MP — Hình ảnh siêu nét, chân thực.</li>
+                                            <li><strong>Cảm biến:</strong> CMOS — Tăng cường chất lượng hình ảnh trong điều kiện thiếu sáng.</li>
+                                            <li><strong>Ống kính:</strong> Tùy chỉnh tiêu cự: 2.8mm / 4mm / 6mm.</li>
+                                            <li><strong>Góc nhìn rộng:</strong> Từ 90° đến 130° — Quan sát bao quát hơn.</li>
+                                            <li><strong>Hồng ngoại ban đêm:</strong> Quan sát rõ nét trong bóng tối lên tới 30m hoặc hơn.</li>
+                                            <li><strong>Kết nối:</strong> LAN & Wi-Fi — Truyền tải dữ liệu ổn định.</li>
+                                            <li><strong>Tính năng thông minh:</strong> Phát hiện chuyển động, nhận diện khuôn mặt, phân tích hành vi.</li>
+                                            <li><strong>Khả năng chống chịu:</strong> Chuẩn IP66 — Chống nước, chống bụi hiệu quả.</li>
+                                            <li><strong>Chất liệu vỏ:</strong> Nhựa cao cấp hoặc kim loại — Bền đẹp, chắc chắn.</li>
+                                        </ul>
+                                    
+                                        <h3>🎯 Lợi Ích Khi Sử Dụng</h3>
+                                        <ul>
+                                            <li>🔒 Đảm bảo an ninh — Giám sát và bảo vệ tài sản hiệu quả.</li>
+                                            <li>📲 Theo dõi từ xa — Xem trực tiếp mọi lúc, mọi nơi qua smartphone.</li>
+                                            <li>💾 Lưu trữ thông minh — Ghi hình liên tục, dễ dàng xem lại khi cần.</li>
+                                        </ul>
+                                    
+                                        <h3>🏠 Ứng Dụng Thực Tế</h3>
+                                        <p>Phù hợp lắp đặt tại: Nhà riêng, văn phòng, cửa hàng, kho xưởng, khu vực công cộng,...</p>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_15.webp" alt="Camera IMOU Trong Nhà" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.6</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera IMOU Trong Nhà 360° – Full HD</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Xoay 360° – Ghi hình ban đêm – Đàm thoại 2 chiều</span>
+                                            <div class="total">
+                                                <span class="gia">3.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>8.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_17.webp" alt="Camera IMOU 360 Trong Nhà" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.3</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera IMOU 360° Trong Nhà – Tích Hợp AI</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Xoay ngang 360° – AI phát hiện người – Đàm thoại 2 chiều</span>
+                                            <div class="total">
+                                                <span class="gia">6.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>12.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_2.webp" alt="Camera IMOU Đời Mới Nhất" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>5.0</span>
+                                            </div>
+                                
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera IMOU Bản Mới Nhất – Full HD | AI Nhận Diện</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Phiên bản 2025 – Hỗ trợ AI – Kết nối siêu nhanh</span>
+                                            <div class="total">
+                                                <span class="gia">1.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>3.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_20.webp" alt="Camera Ẩn Hồng Ngoại Siêu Nhỏ" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.0</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera Ẩn Hồng Ngoại Siêu Nhỏ – Quay Đêm Cực Nét</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Thiết kế bí mật – Hồng ngoại ban đêm – Dễ lắp đặt</span>
+                                            <div class="total">
+                                                <span class="gia">500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_21.webp" alt="Camera Cút Áo Ẩn Nấp" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.5</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera Cút Áo Ẩn Nấp – Quay Lén Siêu Kín Đáo</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Thiết kế giấu kín – Quay video ẩn – Đàm thoại 2 chiều</span>
+                                            <div class="total">
+                                                <span class="gia">2.000.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>3.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_50.webp" alt="Camera Hisiki Lắp Trần Nhà" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.0</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera Hisiki Lắp Trần Nhà – Giám Sát 360°</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Lắp trần nhà – Quay 360° – Quan sát từ xa</span>
+                                            <div class="total">
+                                                <span class="gia">300.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>900.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_20.webp" alt="Camera Hồng Ngoại Bản Nâng Cấp" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.0</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera Hồng Ngoại Bản Nâng Cấp – Quan Sát Ban Đêm</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Chất lượng hình ảnh sắc nét – Quan sát hồng ngoại ban đêm – Chống nước</span>
+                                            <div class="total">
+                                                <span class="gia">600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.200.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_2.webp" alt="Camera IMOU" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.3</span>
+                                            </div>
+                                
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera IMOU – Quan Sát Toàn Diện</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Chất lượng 1080P – Kết nối WiFi – Quan sát ban đêm</span>
+                                            <div class="total">
+                                                <span class="gia">600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.200.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_51.webp" alt="Camera Kép IMOU" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.6</span>
+                                            </div>
+                                
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera Kép IMOU – Quan Sát Hai Chiều</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Độ phân giải kép – Quan sát toàn diện – Kết nối mạnh mẽ</span>
+                                            <div class="total">
+                                                <span class="gia">3.600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>9.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_12.webp" alt="Camera Nhỏ Mini Nâng Cấp" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.0</span>
+                                            </div>
+                                
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera Nhỏ Mini Nâng Cấp</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Kích thước nhỏ gọn – Công nghệ tiên tiến</span>
+                                            <div class="total">
+                                                <span class="gia">4.600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>7.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_36.webp" alt="Camera Ngụy Trang" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.6</span>
+                                            </div>
+                                
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera Ngụy Trang</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Thiết kế tinh tế – Ẩn mình hoàn hảo</span>
+                                            <div class="total">
+                                                <span class="gia">8.600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>12.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_33.webp" alt="Camera Ngụy Trang IMOU" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.7</span>
+                                            </div>
+                                
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera Ngụy Trang IMOU</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Thiết kế tinh tế – Ẩn mình hoàn hảo</span>
+                                            <div class="total">
+                                                <span class="gia">2.300.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>4.700.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_38.webp" alt="Camera Thông Minh" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.5</span>
+                                            </div>
+                                
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera Thông Minh</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Công nghệ mới – Tiện ích hiện đại</span>
+                                            <div class="total">
+                                                <span class="gia">1.400.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>4.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_4.webp" alt="Camera Trực Tuyến Imou" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.5</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera Trực Tuyến Imou</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Camera kết nối trực tuyến</span>
+                                            <div class="total">
+                                                <span class="gia">3.400.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>6.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_40.webp" alt="Camera Ngụy Trang Thành Loa" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.7</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera Ngụy Trang Thành Loa</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Camera ngụy trang thiết bị loa</span>
+                                            <div class="total">
+                                                <span class="gia">400.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/product_42.jpg" alt="Camera Ban Đêm" class="card-img">
+                                
+                                        <div class="card-overlay">
+                                
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+                                
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>5.4</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Camera Ban Đêm</h3>
+                                
+                                        <div class="card-info">
+                                            <span class="genre">Night Vision</span>
+                                            <div class="total">
+                                                <span class="gia">2.499.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>5.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                    </div>
+                            <div class="movies-grid">
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_1.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.9</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                          
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Dior Sauvage</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Quyến rũ/Thanh lịch</span>
+                                            <div class="total">
+                                                <span class="gia">2.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>7.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_2.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>5.0</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+        
+                                           
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Chanel: BLEU</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Sang Trong</span>
+                                            <div class="total">
+                                                <span class="gia">5.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>10.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_4.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.6</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+        
+                                            
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Allure homme sport</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Nam tinh manh me</span>
+                                            <div class="total">
+                                                <span class="gia">3.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>8.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_5.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.3</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Bleu Limitit</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Limitit/Chanel</span>
+                                            <div class="total">
+                                                <span class="gia">6.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>12.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_6.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>5.0</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Fashion Perfume</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">new grand</span>
+                                            <div class="total">
+                                                <span class="gia">1.500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>3.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_7.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.0</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">1917</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">War/Drama</span>
+                                            <div class="total">
+                                                <span class="gia">500.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_8.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.5</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">versace</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Fantasy</span>
+                                            <div class="total">
+                                                <span class="gia">2.000.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>3.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_10.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.0</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Narciso</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">lang man / nhe nhang</span>
+                                            <div class="total">
+                                                <span class="gia">300.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>900.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_11.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.0</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Dore</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Nhe nhang / lau phai</span>
+                                            <div class="total">
+                                                <span class="gia">600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.200.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_12.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.3</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Red Leather</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Manh me</span>
+                                            <div class="total">
+                                                <span class="gia">600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.200.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_16.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.6</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Versace Eros</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Sang Trong / Cuon Hut</span>
+                                            <div class="total">
+                                                <span class="gia">3.600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>9.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_13.webp" alt="movie" class="card-img" >
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.0</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Lord Of The MAN</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">For Man</span>
+                                            <div class="total">
+                                                <span class="gia">4.600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>7.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_19.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.6</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Smell of Death</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Danger</span>
+                                            <div class="total">
+                                                <span class="gia">8.600.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>12.000.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_21.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.7</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Gabana</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Dore</span>
+                                            <div class="total">
+                                                <span class="gia">2.300.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>4.700.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk__22.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.5</span>
+                                            </div>
+        
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">LanVin</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">New Profectional</span>
+                                            <div class="total">
+                                                <span class="gia">1.400.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>4.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_27.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>4.5</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Rose</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">Flower</span>
+                                            <div class="total">
+                                                <span class="gia">3.400.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>6.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_28.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>3.7</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Good girl</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">thanh lich / nu tinh</span>
+                                            <div class="total">
+                                                <span class="gia">400.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>1.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="movie-card">
+                                    <div class="card-head">
+                                        <img src="../img/lk_32.webp" alt="movie" class="card-img">
+        
+                                        <div class="card-overlay">
+        
+                                            <div class="bookmark">
+                                                <ion-icon name="bookmark"></ion-icon>
+                                            </div>
+        
+                                            <div class="rating">
+                                                <ion-icon name="star-outline"></ion-icon>
+                                                <span>5.4</span>
+                                            </div>
+                                            <button class="button">
+                                                <span class="button-content">Xem Chi Tiết</span>
+                                            </button>
+                                            <button class="dathang">
+                                                <span class="button-content">Đặt Hàng</span>
+                                            </button>
+                                            <div class="giohang">
+                                                <i class='bx bxs-cart'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card-body">
+                                        <h3 class="card-title">Gaultier</h3>
+        
+                                        <div class="card-info">
+                                            <span class="genre">scandal</span>
+                                            <div class="total">
+                                                <span class="gia">2.499.000<sup>VND</sup></span>
+                                                <span class="sale"> <del>5.800.000</del><sup>VND</sup> <span>-50%</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    </div>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <button class="load-more">LOAD MORE</button>
+            </section>
+
+            <section class="category" id="category">
+            <h2 class="section-heading">Thương Hiệu Quan Tâm</h2>
+
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="../img/hikvision.jpeg" alt="image" class="card-img">
+                        <a href="https://www.prada.com/us/en.html" class="name">Prada</a>
+                        <div class="total-1">100</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="../img/dahua.jpg" alt="image" class="card-img">
+                        <a href="https://www.gucci.com/?srsltid=AfmBOorAT2s5RD-3-Bis72GwA06amOp-9SBZ4tZUWDxYyH6i8OHASvan" class="name">Gucci</a>
+                        <div class="total-1">95</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="../img/ez.jpg" alt="image" class="card-img">
+                        <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiz0Z2iqpqMAxVj0RYFHb7-FtsYABABGgJ0bA&co=1&gclid=Cj0KCQjw-e6-BhDmARIsAOxxlxWFf7z90miscOJvXrcGn8BRSfLXCjsyd1Y4N9XvjmWCvEAStJziDksaApNrEALw_wcB&ohost=www.google.com&cid=CAESVeD2pVM6Yjs2nOyTch9qR-kv-uGFMwG2PAy3qXC2RgtpnVgjVvuIXQfne7c-LWpy0TINJm75sry8r1sMbemrTgIA0Vn7WAOH_6YIEbKH6sz5_XpjHXQ&sig=AOD64_3I1brvLGhKnVitLeWTXKKXjDp6TA&q&adurl&ved=2ahUKEwjb9ZiiqpqMAxVUra8BHXHUIAgQ0Qx6BAgJEAE" class="name">Chanel</a>
+                        <div class="total-1">95</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="../img/imou.jpg" alt="image" class="card-img">
+                        <a href="https://www.balenciaga.com/?srsltid=AfmBOoqufMO3obdjpJG65980_tKNN3jvkcbhehbdWIHPqifSbYUDsj5u" class="name">Balenciaga</a>
+                        <div class="total-1">80</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="../img/kb.jpg" alt="image" class="card-img">
+                        <a href="https://www.fendi.com/?srsltid=AfmBOopSjxHGOyhsQimcV9yUuDsPch4ItpI0kW9J0-oiTJZpDMe4zPn-" class="name">fendi</a>
+                        <div class="total-1">100</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="../img/sony.webp" alt="image" class="card-img">
+                        <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi1x9fS2pyMAxVd2BYFHUK0CE0YABAAGgJ0bA&co=1&gclid=CjwKCAjwnPS-BhBxEiwAZjMF0vaYojnUjIfQ1BceWsudVRcAgu3bfI5y0B34jDm8oI13FWald58a0BoCbMgQAvD_BwE&ohost=www.google.com&cid=CAESVeD2YeVI9g3wE7FxmU8CVkAzJO1l_gVNgHatlBG-SH82-m8_CPn2jh0SIyrKDUgwMBMhxzJLAFIW2FB1UCDnr2itOdeV_pipssUgJnija6RHiT9M7iM&sig=AOD64_1RZcpxHuflHZk3aT3QPJfiJuvqnw&q&adurl&ved=2ahUKEwj8gNPS2pyMAxVun68BHQ7MIAgQ0Qx6BAgvEAE" class="name">Dior</a>
+                        <div class="total-1">50</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="../img/bosch.jpg" alt="image" class="card-img">
+                        <a href="https://front-row.com/men/hugo-boss-sale/ready-to-wear.html" class="name">Boss</a>
+                        <div class="total-1">20</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="../img/banasonic.jpg" alt="image" class="card-img">
+                        <a href="https://www.versace.com/row/en/" class="name">Versace</a>
+                        <div class="total-1">80</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../img/logo_name.png" alt="image" class="footer-logo">
+                    <p class="slogan">Camera An Ninh Cao Cấp, Giám Sát Hiệu Quả, Bảo Vệ An Toàn Tuyệt Đối</p>
+
+                    <div class="social-link">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-tiktok"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <ul>
+                        <h4 class="link-heading">Khoa GUARD</h4>
+                
+                        <li class="link-item"><a href="#">Về Chúng Tôi</a></li>
+                        <li class="link-item"><a href="#">Hồ Sơ Của Tôi</a></li>
+                        <li class="link-item"><a href="#">Gói Dịch Vụ</a></li>
+                        <li class="link-item"><a href="#">Liên Hệ</a></li>
+                    </ul>
+                
+                    <ul>
+                        <h4 class="link-heading">Khám Phá</h4>
+                
+                        <li class="link-item"><a href="#">Camera An Ninh Mới</a></li>
+                        <li class="link-item"><a href="#">Tin Tức & Xu Hướng</a></li>
+                        <li class="link-item"><a href="#">Khuyến Mãi Đặc Biệt</a></li>
+                        <li class="link-item"><a href="#">Hệ Thống Giám Sát Cao Cấp</a></li>
+                    </ul>
+                
+                    <ul>
+                        <h4 class="link-heading">Sản Phẩm</h4>
+                
+                        <li class="link-item"><a href="#">Camera Trong Nhà</a></li>
+                        <li class="link-item"><a href="#">Camera Ngoài Trời</a></li>
+                        <li class="link-item"><a href="#">Camera IP</a></li>
+                        <li class="link-item"><a href="#">Hệ Thống Báo Động</a></li>
+                    </ul>
+                
+                    <ul>
+                        <h4 class="link-heading">Hỗ Trợ</h4>
+                
+                        <li class="link-item"><a href="#">Tài Khoản & Thanh Toán</a></li>
+                        <li class="link-item"><a href="#">Gói Cước & Dịch Vụ</a></li>
+                        <li class="link-item"><a href="#">Hướng Dẫn Sử Dụng</a></li>
+                        <li class="link-item"><a href="#">Chính Sách Bảo Mật</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="footer-copyright">
+                <div class="copyright">
+                    <p>© by VÕ ĐĂNG KHOA -DHKHMT19A</p>
+                </div>
+
+                <div class="wrapper">
+                    <a href="#">Chính Sách Bảo Mật</a>
+                    <a href="#">Điều Khoản & Điều Kiện</a>
+                </div>
+                
+            </div>
+
+        </footer>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+        
+                <div class="form-group">
+                    <input type="tel" name="sdt" required>
+                    <label>SDT:</label>
+                </div>
+        
+                <div class="form-group">
+                    <input type="text" name="diachi" required>
+                    <label>Địa Chỉ:</label>
+                </div>
+        
+                <div class="form-group">
+                    <input type="number" name="soluong" min="1" value="1" required>
+                    <label>Số Lượng:</label>
+                </div>
+        
+                <div class="form-group">
+                    <input type="text" name="tongtien" readonly style="background-color: #fff; color: red;">
+                </div>
+        
+                <div class="form-group">
+                    <textarea name="ghichu" required style="height: 100px; color: aqua;"></textarea>
+                    <label>Ghi Chú:</label>
+                </div>
+        
+                <div class="modal-footer">
+                    <button class="cancel-button">Hủy</button>
+                    <button class="ok-button">Ok</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
