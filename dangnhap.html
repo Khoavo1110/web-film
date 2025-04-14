@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="./css/dangnhap.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <video  autoplay loop muted>
+        <source src="./video/FPT.mp4">
+    </video>
+    <header class="header">
+        <img src="./img/khoa-logo2.png" alt="" style="width:150px;">
+        <nav class="navigation">
+            <a href="index.html">Trang Chủ</a>
+            <a href="home.html">Cửa Hàng</a>
+            <a href="#">Help</a>
+            <button class="btnLogin-popup">Đăng Nhập</button>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <span class="icon-close"><i class='bx bx-x' ></i></span>
+        <div class="from-box login">
+            <h2>Đăng Nhập</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxl-gmail'></i></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                    <input type="password" required>
+                    <label>Mật Khẩu</label>
+                </div>
+                <div class="remember-forgot">
+                    <label ><input type="checkbox">Nhớ Tôi</label>
+                    <a href="#">Bạn Quên Mật Khẩu ?</a>
+                </div>
+
+                <button type="submit" class="btn">Đăng Nhập</button>
+                <div class="login-register"><p>Bạn chưa có tài khoản ? <a href="#" class="register-link">Đăng Ký</a></p></div>
+            </form>
+        </div>
+        <div class="from-box  register">
+            <h2>Đăng Ký</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class='bx bx-user' ></i></span>
+                    <input type="text" required>
+                    <label>Tên Người Dùng</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxl-gmail'></i></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                    <input type="password" required>
+                    <label>Mật Khẩu</label>
+                </div>
+                <div class="remember-forgot">
+                    <label ><input type="checkbox">Đồng ý với điều khoản?</label>
+                  
+                </div>
+
+                <button type="submit" class="btn">Đăng Ký</button>
+                <div class="login-register"><p>Đã có tài khoản? <a href="#" class="login-link">Đăng Nhập</a></p></div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/dangnhap.js"></script>
+    
+</body>
+</html>
