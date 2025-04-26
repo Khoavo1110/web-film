@@ -30,7 +30,7 @@ header{
 .navigation a{
     position:relative;
     font-size:1.1em;
-    color:#fff8e7;
+    color:#221613;
     text-decoration: none;
     font-weight:500;
     margin-left:40px;
@@ -56,19 +56,19 @@ header{
 .navigation .btnLogin-popup{
 width:130px;
 height :50px;
-border:2px solid #fff;
+border:2px solid #160505;
 outline:none;
 background-color: transparent;
 border-radius:6px;
 cursor:pointer;
 font-size:1.1em;
-color:#fff;
+color:#280f0f;
 font-weight:500;
 margin-left:40px;
 transition: .5s;
 }
 .navigation .btnLogin-popup:hover{
-    background:#fff;
+    background:#cba5a5;
     color:#162939;
 }
 .wrapper{
@@ -133,7 +133,7 @@ transform: translateX(0);
 }
 .from-box h2{
     font-size:2em;
-    color:#ddd;
+    color:black;
     text-align: center;
 
 }
@@ -150,7 +150,7 @@ transform: translateX(0);
     left:5px;
     transform: translateY(-50%);
     font-size: 1em;
-    color:#ddd;
+    color:black;
     font-weight: 500;
     pointer-events: none;
     transition: .5s;
@@ -167,7 +167,7 @@ transform: translateX(0);
     border:none;
     outline:none;
     font-size:1em;
-    color:#ddd;
+    color:black;
     font-weight: 500;
     padding:0 35px 0 5px
 
@@ -176,7 +176,7 @@ transform: translateX(0);
     position: absolute;
     right: 8px;
     font-size: 1.2em;
-    color:#1ddd;
+    color:black;
     line-height: 57px;
 
 }
@@ -215,14 +215,14 @@ transform: translateX(0);
 }
 .login-register{
     font-size:.9em;
-    color:#ddd;
+    color:black;
     text-align: center;
     font-weight: 500;
     margin :25px 0 10px;
 
 }
 .login-register p a{
-    color:#ddd;
+    color:black;
     text-decoration: none;
     font-weight: 600;
 }
