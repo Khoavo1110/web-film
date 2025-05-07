@@ -1,3 +1,4 @@
+// === HEADER & NAV ===
 const header = document.querySelector('header');
 const nav = document.querySelector('nav');
 const navbarMenuBtn = document.querySelector('.navbar-menu-btn');
@@ -5,193 +6,257 @@ const navbarForm = document.querySelector('.navbar-form');
 const navbarFormCloseBtn = document.querySelector('.navbar-form-close');
 const navbarSearchBtn = document.querySelector('.navbar-search-btn');
 
-function navIsActive() {
+navbarMenuBtn.addEventListener('click', () => {
     header.classList.toggle('active');
     nav.classList.toggle('active');
     navbarMenuBtn.classList.toggle('active');
-
-}
-
-navbarMenuBtn.addEventListener('click', navIsActive);
-
-const searchBarIsActive = () => navbarForm.classList.toggle('active');
-
-navbarSearchBtn.addEventListener('click', searchBarIsActive);
-navbarFormCloseBtn.addEventListener('click', searchBarIsActive);
-const  number=document.querySelectorAll('.banner-container .banner-card');
-console.log(number);
-const right_btn=document.querySelector('.h2');
-console.log(right_btn);
-const left_btn=document.querySelector('.h1');
-console.log(left_btn);
-let index=0;
-right_btn.addEventListener('click',()=>{
-    index=index+1;
-if(index>number.length-1){
-    index=0;
-}
-    document.querySelector('.banner-container').style.right=index*100+"%";
 });
-left_btn.addEventListener('click',()=>{
-    index=index-1;
-    if(index<0){
-        index=number.length-1;
-    }
-    document.querySelector('.banner-container').style.right=index*100+"%";
-});
-const number_movie_grid=document.querySelectorAll('.product-container .movies-grid')
-console.log(number_movie_grid)
-let new_index=0;
-const Male=document.querySelector('#featured');
-const Fm=document.querySelector('#popular'); 
-const Ult=document.querySelector('#newest');
-//  kiểm tra vị trí của checkbox
+navbarSearchBtn.addEventListener('click', () => navbarForm.classList.toggle('active'));
+navbarFormCloseBtn.addEventListener('click', () => navbarForm.classList.toggle('active'));
 
-document.addEventListener("DOMContentLoaded", function () {
+// === BANNER SLIDER ===
+const banners = document.querySelectorAll('.banner-container .banner-card');
+const rightBtn = document.querySelector('.h2');
+const leftBtn = document.querySelector('.h1');
+let bannerIndex = 0;
+
+rightBtn.addEventListener('click', () => {
+    bannerIndex = (bannerIndex + 1) % banners.length;
+    document.querySelector('.banner-container').style.right = bannerIndex * 100 + '%';
+});
+leftBtn.addEventListener('click', () => {
+    bannerIndex = (bannerIndex - 1 + banners.length) % banners.length;
+    document.querySelector('.banner-container').style.right = bannerIndex * 100 + '%';
+});
+
+// === PRODUCT FILTER ===
+document.addEventListener("DOMContentLoaded", () => {
     const radioButtons = Array.from(document.querySelectorAll(".filter-radios input[type='radio']"));
-
-    function getSelectedIndex() {
-        return radioButtons.indexOf(document.querySelector(".filter-radios input[type='radio']:checked"));
-    }
-
     radioButtons.forEach(radio => {
         radio.addEventListener('click', () => {
-            let new_index=getSelectedIndex()
-            document.querySelector('.product-container').style.right=new_index*100+"%";
+            const index = radioButtons.indexOf(document.querySelector(".filter-radios input[type='radio']:checked"));
+            document.querySelector('.product-container').style.right = index * 100 + '%';
         });
     });
 });
-//feedback
-const numberoffeed=document.querySelectorAll('.feedback-container .feedback-card');
-let indexoffeed=0;
-function duychuyen(){
- indexoffeed=indexoffeed+1;
- setTimeout(()=>{
-    if(indexoffeed>numberoffeed.length-1){
-        indexoffeed=0;
-    }
-    document.querySelector('.feedback-container').style.right=indexoffeed*100+"%";
-    duychuyen();
- },5000);
-}
-duychuyen()
-const dathang=document.querySelectorAll('.dathang');  
-dathang.forEach(button => {
+
+// === CHI TIẾT SẢN PHẨM ===
+document.querySelectorAll('.movie-card').forEach(card => {
+    const btn = card.querySelector('.button');
+    const chitiet = card.querySelector('.chitiet');
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        chitiet.classList.toggle('active');
+    });
+});
+document.querySelectorAll('.close-chitiet').forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.parentElement.classList.remove('active');
+    });
+});
+
+// === MODAL ĐẶT HÀNG ===
+document.querySelectorAll('.dathang').forEach(button => {
     button.addEventListener('click', () => {
-        // Mở modal
         const modal = document.querySelector('.modal');
         modal.style.display = "flex";
-        
-        // Lấy phần tử cha của nút dathang để tìm sản phẩm tương ứng
-        const productCard = button.closest('.movie-card');  // Giả sử .movie-card là lớp của mỗi sản phẩm
-        
-        // Lấy giá của sản phẩm tương ứng (tìm trong phạm vi của productCard)
-        const gia = parseFloat(productCard.querySelector('.gia').innerText.replace('VND', '').replace('.', '').trim());
 
-        // Lấy input số lượng trong modal
-        const soLuongInput = document.querySelector('input[name="soluong"]');
+        // Bỏ active-modal cũ
+        document.querySelectorAll('.movie-card').forEach(card => card.classList.remove('active-modal'));
 
-        // Hàm tính tổng tiền và cập nhật vào input "Tổng Tiền"
+        // Thêm vào thẻ đang click
+        const productCard = button.closest('.movie-card');
+        productCard.classList.add('active-modal');
+
+        const gia = parseFloat(productCard.querySelector('.gia').innerText.replace(/\D/g, ''));
+        const soLuongInput = modal.querySelector('input[name="soluong"]');
+
         const updateTongTien = () => {
-            const soLuong = parseInt(soLuongInput.value) || 1;  // Tránh trường hợp người dùng nhập giá trị không hợp lệ
+            const soLuong = parseInt(soLuongInput.value) || 1;
             const tongTien = gia * soLuong;
-            document.querySelector('input[name="tongtien"]').value = tongTien.toLocaleString() + ' VND';  // Cập nhật vào input tổng tiền
+            modal.querySelector('input[name="tongtien"]').value = tongTien.toLocaleString() + ' VND';
         };
 
-        // Cập nhật tổng tiền ngay khi modal mở
         updateTongTien();
-
-        // Thêm sự kiện input để cập nhật tổng tiền khi số lượng thay đổi
         soLuongInput.addEventListener('input', updateTongTien);
     });
 });
-document.querySelector('.close').addEventListener('click',()=>{
-    document.querySelector('.modal').style.display="none";
-}   );
-const movieCards = document.querySelectorAll('.movie-card');
-
-movieCards.forEach(card => {
-    const btn = card.querySelector('.button');     // button xem chi tiết trong card
-    const chitiet = card.querySelector('.chitiet'); // phần chi tiết trong card
-
-    // Gắn sự kiện click cho từng button
-    btn.addEventListener('click', (e) => {
-        e.preventDefault(); // Chặn load link nếu có
-        chitiet.classList.toggle('active'); // Ẩn/hiện chi tiết
-    });
+document.querySelector('.cancel-button').addEventListener('click', () => {
+    document.querySelector('.modal').style.display = 'none';
 });
-const btnclose_chitiet=document.querySelectorAll('.close-chitiet');
-btnclose_chitiet.forEach(btn=>{
-    btn.addEventListener('click',()=>{
-        btn.parentElement.classList.remove('active');
-    })
-}); 
-/* thêm giỏ hàng*/
 
-// Bắt hết tất cả nút giohang
-let btnGioHang = document.querySelectorAll('.giohang');
+document.querySelector('.close').addEventListener('click', () => {
+    document.querySelector('.modal').style.display = "none";
+});
 
-function updateTotal() {
-    let total = 0;
-    document.querySelectorAll('#cart-body tr').forEach(function(row) {
-        let priceText = row.querySelector('.item-price').innerText;
-        let priceNumber = parseFloat(priceText.replace(/\D/g, ''));
-        total += priceNumber;
-    });
+// === GIỎ HÀNG (DÙNG LOCALSTORAGE) ===
+const cartGioHang = document.querySelector('.cart-giohang');
+document.querySelector('.navbar-cart-btn').addEventListener('click', () => cartGioHang.style.display = "flex");
+document.querySelector('.close-giohang').addEventListener('click', () => cartGioHang.style.display = "none");
 
-    document.getElementById('total-price').innerText = total.toLocaleString() + ' VND';
-}
-function updateCartQuantity() {
-    let quantity = document.querySelectorAll('#cart-body tr').length;
-    document.querySelector('.navbar-cart-quantity').innerText = `(${quantity})`;
+function saveCartToLocalStorage(cartItems) {
+    localStorage.setItem('cart', JSON.stringify(cartItems));
 }
 
+function loadCartFromLocalStorage() {
+    const cart = localStorage.getItem('cart');
+    return cart ? JSON.parse(cart) : [];
+}
 
-btnGioHang.forEach(function(button) {
-    button.addEventListener('click', function() {
-        alert('Đã thêm vào giỏ hàng! lướt lên vào giỏ hàng để xem nhé');
-        let product = this.closest('.movie-card');
+function updateCartUI() {
+    const cartItems = loadCartFromLocalStorage();
+    const cartBody = document.getElementById('cart-body');
+    const totalPriceElement = document.getElementById('total-price');
+    const cartQuantityElement = document.querySelector('.navbar-cart-quantity'); // Số lượng trong header
 
-        let imgSrc = product.querySelector('.card-img').src;
-        let priceText = product.querySelector('.gia').innerText;
-        let price = parseFloat(priceText.replace(/\D/g, ''));
+    cartBody.innerHTML = '';
+    let totalPrice = 0;
 
-        let newRow = document.createElement('tr');
-        newRow.innerHTML = `
-            <td><img src="${imgSrc}" width="80px" height="80px"></td>
-            <td class="item-price" data-price="${price}">${price.toLocaleString()} VND</td>
-            <td><input type="number" value="1" min="1" class="quantity" style="color:white;"></td>
-            <td><button class="remove">Xóa</button></td>
+    if (cartItems.length === 0) {
+        cartBody.innerHTML = '<tr><td colspan="6">Giỏ hàng của bạn đang trống!</td></tr>';
+        totalPriceElement.textContent = '0 VND';
+        cartQuantityElement.textContent = '(0)';
+        return;
+    }
+
+    cartItems.forEach((item, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td><img src="${item.img}" width="80px" height="80px"></td>
+            <td>${item.name}</td>
+            <td>${item.price.toLocaleString()} VND</td>
+            <td><input type="number" min="1" value="${item.quantity}" class="quantity-input" data-index="${index}" style="width:60px;"></td>
+            <td class="line-total">${(item.price * item.quantity).toLocaleString()} VND</td>
+            <td><button class="remove" data-index="${index}">Xóa</button></td>
         `;
+        cartBody.appendChild(row);
+        totalPrice += item.price * item.quantity;
+    });
 
-        document.getElementById('cart-body').appendChild(newRow);
+    totalPriceElement.textContent = `${totalPrice.toLocaleString()} VND`;
 
-        newRow.querySelector('.quantity').addEventListener('input', function() {
-            let quantity = this.value;
-            if (quantity < 1) quantity = 1;
-            let unitPrice = parseFloat(newRow.querySelector('.item-price').dataset.price);
-            let totalPrice = unitPrice * quantity;
-            newRow.querySelector('.item-price').innerText = totalPrice.toLocaleString() + ' VND';
-            updateTotal();
+    // Cập nhật số lượng giỏ hàng trong header
+    cartQuantityElement.textContent = `(${cartItems.reduce((acc, item) => acc + item.quantity, 0)})`;
+
+    // Bắt sự kiện thay đổi số lượng
+    const quantityInputs = cartBody.querySelectorAll('.quantity-input');
+    quantityInputs.forEach(input => {
+        input.addEventListener('input', function () {
+            let index = parseInt(this.dataset.index);
+            let newQuantity = parseInt(this.value);
+            if (newQuantity < 1 || isNaN(newQuantity)) newQuantity = 1;
+            const cartItems = loadCartFromLocalStorage();
+            cartItems[index].quantity = newQuantity;
+            saveCartToLocalStorage(cartItems);
+            updateCartUI(); // Gọi lại để cập nhật UI và tổng
         });
+    });
 
-        newRow.querySelector('.remove').addEventListener('click', function() {
-            newRow.remove();
-            updateTotal();
-            updateCartQuantity();
+    // Bắt sự kiện xóa
+    const removeButtons = cartBody.querySelectorAll('.remove');
+    removeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            let index = parseInt(this.dataset.index);
+            const cartItems = loadCartFromLocalStorage();
+            cartItems.splice(index, 1);
+            saveCartToLocalStorage(cartItems);
+            updateCartUI();
         });
+    });
+}
 
-        updateTotal();
-        updateCartQuantity(); // Cập nhật số lượng khi thêm
-    })
+function removeItem(index) {
+    const cartItems = loadCartFromLocalStorage();
+    cartItems.splice(index, 1);
+    saveCartToLocalStorage(cartItems);
+    updateCartUI();
+}
+
+function checkout() {
+    const cartItems = loadCartFromLocalStorage();
+    if (cartItems.length === 0) {
+        alert('Giỏ hàng của bạn đang trống!');
+        return;
+    }
+
+    localStorage.setItem('orderHistory', JSON.stringify(cartItems));
+    alert('Thanh toán thành công!');
+    localStorage.removeItem('cart');
+    updateCartUI();
+}
+
+// === THÊM VÀO GIỎ HÀNG ===
+document.querySelectorAll('.giohang').forEach(button => {
+    button.addEventListener('click', function () {
+        const productCard = this.closest('.movie-card');
+        const imgSrc = productCard.querySelector('.card-img').src;
+        const name = productCard.querySelector('.card-title').innerText;
+        const price = parseFloat(productCard.querySelector('.gia').innerText.replace(/\D/g, ''));
+
+        let cartItems = loadCartFromLocalStorage();
+        const existingItem = cartItems.find(item => item.name === name);
+
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cartItems.push({ img: imgSrc, name, price, quantity: 1 });
+        }
+
+        saveCartToLocalStorage(cartItems);
+        updateCartUI();
+        alert('Đã thêm vào giỏ hàng! Lướt lên phần giỏ hàng để xem.');
+    });
+});
+document.querySelector('.ok-button').addEventListener('click', function () {
+    const modal = document.querySelector('.modal');
+    const productCard = document.querySelector('.movie-card.active-modal');
+
+    if (!productCard) {
+        alert("Không lấy được sản phẩm.");
+        return;
+    }
+
+    // Lấy dữ liệu từ form
+    const sdt = modal.querySelector('input[name="sdt"]').value.trim();
+    const diachi = modal.querySelector('input[name="diachi"]').value.trim();
+    const soluong = parseInt(modal.querySelector('input[name="soluong"]').value) || 1;
+    const tongtien = modal.querySelector('input[name="tongtien"]').value;
+    const ghichu = modal.querySelector('textarea[name="ghichu"]').value.trim();
+
+    // Kiểm tra bắt buộc
+    if (!sdt || !diachi || !ghichu) {
+        alert('Vui lòng nhập đầy đủ thông tin!');
+        return;
+    }
+
+    // Lấy thông tin sản phẩm
+    const imgSrc = productCard.querySelector('.card-img').src;
+    const name = productCard.querySelector('.card-title').innerText;
+    const price = parseFloat(productCard.querySelector('.gia').innerText.replace(/\D/g, ''));
+
+    // Tạo đơn hàng
+    const order = {
+        img: imgSrc,
+        name: name,
+        price: price,
+        quantity: soluong,
+        sdt: sdt,
+        diachi: diachi,
+        tongtien: tongtien,
+        ghichu: ghichu
+    };
+
+    // Lưu vào localStorage
+    const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+    orders.push(order);
+    localStorage.setItem('orders', JSON.stringify(orders));
+
+    alert('Đơn hàng đã được lưu!');
+
+    // Reset và đóng modal
+    modal.querySelector('form')?.reset(); // nếu bạn có <form>, dùng reset
+    modal.style.display = 'none';
 });
 
-const cartgiohang=document.querySelector('.cart-giohang');
-const cartIcon = document.querySelector('.navbar-cart-btn')
-cartIcon.addEventListener('click',()=> {
-cartgiohang.style.display="flex";
-})
-const closeCart = document.querySelector('.close-giohang')
-closeCart.addEventListener('click',()=> {
-    cartgiohang.style.display="none";
-})
+// === KHI TẢI TRANG ===
+document.addEventListener('DOMContentLoaded', updateCartUI);
